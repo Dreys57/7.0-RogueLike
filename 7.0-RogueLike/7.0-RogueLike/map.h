@@ -1,7 +1,4 @@
 #pragma once
-#ifndef map_h
-#define map_h
-#endif
 #include <vector>
 #include <time.h>
 
