@@ -1,4 +1,2 @@
-﻿  Main.cpp
-C:\Users\admin\source\repos\7.0-RogueLike\7.0-RogueLike\7.0-RogueLike\map.h(226,20): warning C4018:  '<' : incompatibilité signed/unsigned
-C:\Users\admin\source\repos\7.0-RogueLike\7.0-RogueLike\7.0-RogueLike\map.h(229,21): warning C4018:  '<' : incompatibilité signed/unsigned
-  7.0-RogueLike.vcxproj -> C:\Users\admin\source\repos\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe
+﻿  character.cpp
+  7.0-RogueLike.vcxproj -> C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe
