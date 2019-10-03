@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v142:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0
+<<<<<<< HEAD
 Debug|Win32|C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\7.0-RogueLike\7.0-RogueLike\|
+=======
+Debug|Win32|D:\SAE\7.0-RogueLike\7.0-RogueLike\|
+>>>>>>> b2cff103cab03bb59c9598b36456207b9c539f4b
