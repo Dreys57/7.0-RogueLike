@@ -1,9 +1,10 @@
 #pragma once
 #include "map.h"
+#include "entity.h"
 #include <iostream>
 #include <vector>
 
-class Player : public Map
+class Player : public Entity
 {
 public:
 
@@ -14,16 +15,10 @@ public:
 
 	void TakeDamage();
 
-	char sprite;
+	
 
 	int posX;
 
 	int posY;
-
-private:
-
-
-	int health_;
-
 
 };

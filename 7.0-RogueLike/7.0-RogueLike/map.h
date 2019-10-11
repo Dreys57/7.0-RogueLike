@@ -11,6 +11,17 @@ public:
 	Map();
 	~Map() {};
 
+	char sprite;
+
+	char wall_ = '#';
+
+	struct Position
+	{
+		int x;
+
+		int y;
+	};
+
 	void GenerateWall();
 
 	void PrintMap(Player player);
@@ -25,5 +36,4 @@ private:
 
 	std::vector<std::vector<char> > mapVec_;
 
-	char wall_ = '#';
 };
