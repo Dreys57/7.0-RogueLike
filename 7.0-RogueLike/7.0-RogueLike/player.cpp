@@ -6,7 +6,8 @@ Player::Player()
 	sprite = '@';
 	health = 100;
 
-	Position pos{ 1, 1 };
+	pos.x = 1;
+	pos.y = 1;
 }
 
 void Player::PickUp()

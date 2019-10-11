@@ -31,34 +31,7 @@ void Entity::Move(Entity& entity)
 
 	std::cin >> move;
 
-	switch (move)
-	{
-	case 'w':
-
-		TestMove(entity.);
-
-		break;
-
-	case 'a':
-
-		TestMove(player.posX - 1, player.posY);
-
-		break;
-
-	case 's':
-
-		TestMove(player.posX, player.posY + 1);
-
-		break;
-
-	case 'd':
-
-		TestMove(player.posX + 1, player.posY);
-
-		break;
-
-
-	}
+	
 }
 
 void Entity::TestMove(Entity& entity, int newPosX, int newPosY)
@@ -75,10 +48,5 @@ void Entity::TestMove(Entity& entity, int newPosX, int newPosY)
 	{
 
 	}
-	else
-	{
-		mapVec_[newPosX][newPosY] = entity.sprite;
-	}
-
 
 }

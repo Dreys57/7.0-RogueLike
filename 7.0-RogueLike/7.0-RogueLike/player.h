@@ -15,10 +15,6 @@ public:
 
 	void TakeDamage();
 
-	
-
-	int posX;
-
-	int posY;
+	Position pos;
 
 };

@@ -244,7 +244,7 @@ void Map::PrintMap(Player player)
 		{
 			std::cout << mapVec_[i][j];
 		}
-		mapVec_[player.posX][player.posY] = player.sprite;
+		mapVec_[player.pos.x][player.pos.y] = player.sprite;
 		std::cout << " |" << "\n";
 	}
 	std::cout << "_______________________________________________________________\n";
