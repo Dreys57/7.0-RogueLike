@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-﻿  character.cpp
-  7.0-RogueLike.vcxproj -> C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe
-=======
-﻿  Main.cpp
-  7.0-RogueLike.vcxproj -> D:\SAE\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe
->>>>>>> b2cff103cab03bb59c9598b36456207b9c539f4b
+﻿  player.cpp
+  7.0-RogueLike.vcxproj -> C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\RogueLike\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe
