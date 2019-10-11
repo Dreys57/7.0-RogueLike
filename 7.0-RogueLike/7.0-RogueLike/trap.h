@@ -3,13 +3,14 @@
 #include "entity.h"
 #include "map.h"
 #include "player.h"
+
 class Trap : public Entity
 {
 public:
 	Trap();
 	~Trap() {};
 
-	void DamagePlayer();
+	void DamagePlayer(int health);
 
 	int damage;
 	int sprite;
@@ -19,4 +20,5 @@ public:
 
 private:
 };
+
 */

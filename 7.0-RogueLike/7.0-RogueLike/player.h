@@ -15,6 +15,8 @@ public:
 
 	void TakeDamage();
 
+	void PlayerMovement();
+
 	Position pos;
 
 };

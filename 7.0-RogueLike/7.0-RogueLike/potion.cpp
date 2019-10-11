@@ -1,4 +1,5 @@
-/*#include "potion.h"
+/*
+#include "potion.h"
 #include "entity.h"
 #include "map.h"
 #include "player.h"
@@ -8,6 +9,7 @@ Potion::Potion()
 {
 	sprite = '+';
 	healthGain = 100;
+	Position pos{ 3,3 };
 	
 }
 
@@ -23,6 +25,5 @@ void Potion::RegenHealth(int health)
 	}
 
 }
-
-
 */
+

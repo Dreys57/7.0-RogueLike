@@ -1,4 +1,5 @@
-/*#pragma once
+/*
+#pragma once
 #include "entity.h"
 #include "map.h"
 #include "player.h"
@@ -18,4 +19,5 @@ public:
 	int posY;
 
 private:
-};*/
+};
+*/
