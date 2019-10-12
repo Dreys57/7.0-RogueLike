@@ -26,6 +26,8 @@ public:
 
 	void PrintMap(Player player);
 
+	void Menu(int playerhealth);
+
 	bool isWall();
 
 private:

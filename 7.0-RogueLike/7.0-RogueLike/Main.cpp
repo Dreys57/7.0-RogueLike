@@ -9,6 +9,7 @@ int main()
 	Player player = Player();
 
 	map.PrintMap(player);
+	map.Menu(player.health);
 
 	system("pause");
 	return EXIT_SUCCESS;

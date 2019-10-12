@@ -1,8 +1,9 @@
-/*
-#pragma once
+/*#pragma once
 #include "entity.h"
 #include "map.h"
 #include "player.h"
+
+class Entity;
 
 class Potion : public Entity
 {
@@ -19,5 +20,4 @@ public:
 	int posY;
 
 private:
-};
-*/
+};*/
