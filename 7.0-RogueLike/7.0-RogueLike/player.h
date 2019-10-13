@@ -1,22 +1,31 @@
 #pragma once
 #include "map.h"
-#include "entity.h"
 #include <iostream>
 #include <vector>
 
-class Player : public Entity
+class Map;
+
+class Player : public Map
 {
 public:
 
 	Player();
 	~Player() {};
 
+	int health;
+
+	bool isAlive();
+	bool isTrap();
+	bool isPotion();
+
 	void PickUp();
 
 	void TakeDamage();
 
-	void PlayerMovement();
+	void Move();
 
-	Position pos;
+	void TestMove(int newPosX, int newPosY);
+
+	Position posPlayer;
 
 };

@@ -123,7 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="entity.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="map.cpp" />
@@ -131,7 +130,6 @@
     <ClCompile Include="trap.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="entity.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="potion.h" />

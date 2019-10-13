@@ -13,7 +13,9 @@ public:
 
 	char sprite;
 
-	char wall_ = '#';
+	char door = 'X';
+	char wall = '#';
+	char ground = '.';
 
 	struct Position
 	{
@@ -26,9 +28,15 @@ public:
 
 	void PrintMap(Player player);
 
-	void Menu(int playerhealth);
+	void Menu(int playerHealth);
 
-	bool isWall();
+	void UpdateMap(Player player);
+
+	bool isWall(int newPosX, int newPosY);
+
+	bool hasWon(Player player, bool win);
+
+	std::vector<std::vector<char> > mapVec_;
 
 private:
 
@@ -36,6 +44,5 @@ private:
 
 	int width_ = 60;
 
-	std::vector<std::vector<char> > mapVec_;
 
 };

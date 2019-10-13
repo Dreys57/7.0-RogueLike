@@ -5,11 +5,26 @@
 
 int main()
 {
-	Map map = Map();
 	Player player = Player();
 
-	map.PrintMap(player);
-	map.Menu(player.health);
+	Map map = Map();
+
+	bool win = false;
+
+	while (win && player.isAlive())
+	{
+		map.PrintMap(player);
+
+		map.Menu(player.health);
+
+		map.UpdateMap(player);
+
+		player.Move();
+
+		map.hasWon(player, win);
+
+		system("cls");
+	}
 
 	system("pause");
 	return EXIT_SUCCESS;
