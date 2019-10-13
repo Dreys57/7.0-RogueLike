@@ -11,7 +11,7 @@ int main()
 
 	bool win = false;
 
-	while (win && player.isAlive())
+	while (!win && player.isAlive())
 	{
 		map.PrintMap(player);
 

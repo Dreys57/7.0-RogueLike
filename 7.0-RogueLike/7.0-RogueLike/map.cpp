@@ -287,16 +287,3 @@ bool Map::hasWon(Player player, bool win)
 
 	return win;
 }
-
-void Map::Menu(int playerHealth)
-{
-	std::cout << " _____________________________________________________\n";
-	std::cout << "|                                                     |\n";
-	std::cout << "|                Health :" << playerHealth << "                          |\n";
-	std::cout << "|                                                     |\n";
-	std::cout << "|     To move:                                        |\n";
-	std::cout << "|                                                     |\n";
-	std::cout << "|         w = up                  s = down            |\n";
-	std::cout << "|         a = left                d = right           |\n";
-	std::cout << " _____________________________________________________\n";
-}

@@ -1,9 +1,2 @@
-﻿  entity.cpp
-  player.cpp
-  Main.cpp
-  map.cpp
-  potion.cpp
-  trap.cpp
-  Génération de code en cours...
-C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\RogueLike\7.0-RogueLike\7.0-RogueLike\7.0-RogueLike\entity.cpp(10,11): warning C4101:  'pos' : variable locale non référencée
+﻿  Main.cpp
   7.0-RogueLike.vcxproj -> C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\RogueLike\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe
