@@ -1,6 +1,4 @@
-/*
 #include "potion.h"
-#include "entity.h"
 #include "map.h"
 #include "player.h"
 #include "trap.h"
@@ -9,11 +7,18 @@ Trap::Trap()
 {
 	sprite = '!';
 	damage = 30;
-	Position pos{ 5,5 };
+	posTrap.x = 3;
+	posTrap.y = 3;
 }
 
-void Trap::DamagePlayer(int health)
+void Trap::TakeDamage(int health)
 {
+	int minHealth = 0;
+
 	health -= damage;
+
+	if (health < minHealth)
+	{
+		health = minHealth;
+	}
 }
-*/

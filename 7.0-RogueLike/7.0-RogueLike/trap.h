@@ -1,24 +1,19 @@
-/*
 #pragma once
-#include "entity.h"
 #include "map.h"
 #include "player.h"
 
-class Trap : public Entity
+class Trap : public Map
 {
 public:
 	Trap();
 	~Trap() {};
 
-	void DamagePlayer(int health);
+	void TakeDamage(int health);
 
+	char sprite;
 	int damage;
-	int sprite;
 
-	int posX;
-	int posY;
+	Position posTrap;
 
 private:
 };
-
-*/

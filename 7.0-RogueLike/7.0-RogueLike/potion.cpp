@@ -1,15 +1,13 @@
-/*
 #include "potion.h"
-#include "entity.h"
 #include "map.h"
 #include "player.h"
-#include <time.h>
 
 Potion::Potion()
 {
 	sprite = '+';
-	healthGain = 100;
-	Position pos{ 3,3 };
+	healthGain = 20;
+	posHealth.x = 3;
+	posHealth.y = 3;
 	
 }
 
@@ -25,5 +23,4 @@ void Potion::RegenHealth(int health)
 	}
 
 }
-*/
 

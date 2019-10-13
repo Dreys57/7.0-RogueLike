@@ -1,11 +1,8 @@
-/*#pragma once
-#include "entity.h"
+#pragma once
 #include "map.h"
 #include "player.h"
 
-class Entity;
-
-class Potion : public Entity
+class Potion : public Map
 {
 public:
 	Potion();
@@ -16,8 +13,7 @@ public:
 	char sprite;
 	int healthGain;
 
-	int posX;
-	int posY;
+	Position posHealth;
 
 private:
-};*/
+};

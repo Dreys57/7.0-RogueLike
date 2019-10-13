@@ -1,4 +1,6 @@
 #include "map.h"
+#include "potion.h"
+#include "trap.h"
 #include "player.h"
 #include <iostream>
 
@@ -9,6 +11,10 @@ int main()
 
 	Map map = Map();
 
+	Potion potion = Potion();
+
+	Trap trap = Trap();
+
 	bool win = false;
 
 	while (!win && player.isAlive())
@@ -18,6 +24,10 @@ int main()
 		map.Menu(player.health);
 
 		map.UpdateMap(player);
+
+		potion.RegenHealth(player.health);
+
+		trap.TakeDamage(player.health);
 
 		player.Move();
 
