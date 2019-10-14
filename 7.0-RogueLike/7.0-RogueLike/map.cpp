@@ -271,15 +271,15 @@ void Map::PrintMap(Player player)
 
 void Map::Menu(int playerHealth)
 {
-	std::cout << " _____________________________________________________\n";
-	std::cout << "|                                                     |\n";
-	std::cout << "|                Health :" << playerHealth << "                          |\n";
-	std::cout << "|                                                     |\n";
-	std::cout << "|     To move:                                        |\n";
-	std::cout << "|                                                     |\n";
-	std::cout << "|         w = up                  s = down            |\n";
-	std::cout << "|         a = left                d = right           |\n";
-	std::cout << " _____________________________________________________\n";
+	std::cout << " ________________________________________________________\n";
+	std::cout << "|                                                        |\n";
+	std::cout << "|                   Health :" << playerHealth << "                          |\n";
+	std::cout << "|                                                        |\n";
+	std::cout << "|         To move:                         Infos:        |\n";
+	std::cout << "|                                                        |\n";
+	std::cout << "|    w = up      s = down               @ = player       |\n";
+	std::cout << "|    a = left    d = right              + = potion       |\n";
+	std::cout << " ________________________________________________________\n";
 }
 
 void Map::UpdateMap(Player player)
@@ -292,6 +292,7 @@ bool Map::isWall(int newPosX, int newPosY)
 	return mapVec_[newPosX][newPosY] == wall;
 }
 
+
 bool Map::isTrap(int newPosX, int newPosY)
 {
 	return mapVec_[newPosX][newPosY] == '. ';
@@ -301,6 +302,7 @@ bool Map::isPotion(int newPosX, int newPosY)
 {
 	return mapVec_[newPosX][newPosY] == '+';
 }
+
 
 bool Map::hasWon(Player player, bool win)
 {

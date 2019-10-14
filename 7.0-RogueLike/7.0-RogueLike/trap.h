@@ -12,7 +12,7 @@ public:
 
 	int damage;
 
-	//Position posTrap;
+	Position posTrap;
 
 private:
 };
