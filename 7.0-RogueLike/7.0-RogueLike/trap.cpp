@@ -5,13 +5,18 @@
 
 Trap::Trap()
 {
-	sprite = '!';
+	/*int randPosX = (rand() % 58) + 1;
+	int randPosY = (rand() % 18) + 1;*/
+
+	sprite = '. ';
+
 	damage = 30;
-	posTrap.x = 3;
-	posTrap.y = 3;
+
+	/*posTrap.x = randPosX;
+	posTrap.y = randPosY;*/
 }
 
-void Trap::TakeDamage(int health)
+void Trap::DamagePlayer(int health)
 {
 	int minHealth = 0;
 

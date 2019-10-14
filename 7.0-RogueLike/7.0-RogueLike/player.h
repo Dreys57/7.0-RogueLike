@@ -1,5 +1,7 @@
 #pragma once
 #include "map.h"
+#include "potion.h"
+#include "trap.h"
 #include <iostream>
 #include <vector>
 
@@ -15,16 +17,15 @@ public:
 	int health;
 
 	bool isAlive();
-	bool isTrap();
-	bool isPotion();
+	
 
-	void PickUp();
+	void PickUp(Potion potion);
 
-	void TakeDamage();
+	void TakeDamage(Trap trap);
 
-	void Move();
+	void Move(Potion potion, Trap trap);
 
-	void TestMove(int newPosX, int newPosY);
+	void TestMove(int newPosX, int newPosY, Potion potion, Trap trap);
 
 	Position posPlayer;
 

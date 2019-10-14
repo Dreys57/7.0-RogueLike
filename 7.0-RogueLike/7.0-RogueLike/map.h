@@ -3,12 +3,15 @@
 #include <vector>
 
 class Player;
+class Potion;
+class Trap;
 
 class Map
 {
 public:
 
 	Map();
+	Map(Player player, Potion potion, Trap trap);
 	~Map() {};
 
 	char sprite;
@@ -33,6 +36,10 @@ public:
 	void UpdateMap(Player player);
 
 	bool isWall(int newPosX, int newPosY);
+
+	bool isTrap(int newPosX, int newPosY);
+
+	bool isPotion(int newPosX, int newPosY);
 
 	bool hasWon(Player player, bool win);
 

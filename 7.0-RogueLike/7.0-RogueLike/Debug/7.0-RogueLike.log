@@ -1,5 +1,10 @@
 ﻿  Main.cpp
+  map.cpp
+  player.cpp
   potion.cpp
   trap.cpp
+C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\RogueLike\7.0-RogueLike\7.0-RogueLike\7.0-RogueLike\Main.cpp(11,12): warning C4244:  'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\RogueLike\7.0-RogueLike\7.0-RogueLike\7.0-RogueLike\trap.cpp(11,15): warning C4305:  '=' : troncation de 'int' à 'char'
   Génération de code en cours...
-  7.0-RogueLike.vcxproj -> D:\RogueLike\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe
+C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\RogueLike\7.0-RogueLike\7.0-RogueLike\7.0-RogueLike\trap.cpp(11,11): warning C4309:  '=' : troncation de valeur de constante
+  7.0-RogueLike.vcxproj -> C:\Users\Vincent\Documents\SAE\SAE_Travaux_ecole\RogueLike\7.0-RogueLike\7.0-RogueLike\Debug\7.0-RogueLike.exe

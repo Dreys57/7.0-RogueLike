@@ -8,12 +8,11 @@ public:
 	Trap();
 	~Trap() {};
 
-	void TakeDamage(int health);
+	void DamagePlayer(int health);
 
-	char sprite;
 	int damage;
 
-	Position posTrap;
+	//Position posTrap;
 
 private:
 };

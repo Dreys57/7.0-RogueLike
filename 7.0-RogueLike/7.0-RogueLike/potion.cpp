@@ -4,10 +4,15 @@
 
 Potion::Potion()
 {
+	/*int randPosX = (rand() % 58) + 1;
+	int randPosY = (rand() % 18) + 1;*/
+
 	sprite = '+';
+
 	healthGain = 20;
-	posHealth.x = 3;
-	posHealth.y = 3;
+
+	/*posHealth.x = randPosX;
+	posHealth.y = randPosY;*/
 	
 }
 

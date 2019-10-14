@@ -3,37 +3,38 @@
 #include "trap.h"
 #include "player.h"
 #include <iostream>
+#include <time.h>
 
 
 int main()
 {
-	Player player = Player();
+	srand(time(NULL));
 
-	Map map = Map();
+	Player player = Player();
 
 	Potion potion = Potion();
 
 	Trap trap = Trap();
 
+	Map map = Map(player, potion, trap);
+
+
+
 	bool win = false;
 
 	while (!win && player.isAlive())
 	{
+		system("cls");
+
 		map.PrintMap(player);
 
 		map.Menu(player.health);
 
 		map.UpdateMap(player);
 
-		potion.RegenHealth(player.health);
-
-		trap.TakeDamage(player.health);
-
-		player.Move();
+		player.Move(potion, trap);
 
 		map.hasWon(player, win);
-
-		system("cls");
 	}
 
 	system("pause");

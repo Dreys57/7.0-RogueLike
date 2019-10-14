@@ -1,5 +1,7 @@
 #include "map.h"
 #include "player.h"
+#include "potion.h"
+#include "trap.h"
 
 
 Map::Map()
@@ -17,6 +19,25 @@ Map::Map()
 	mapVec_[19][58] = door;
 
 	GenerateWall();
+}
+
+Map::Map(Player player, Potion potion, Trap trap): Map()
+{
+	int maxPotion = 5;
+	int maxTrap = 6;
+
+	mapVec_[player.posPlayer.x][player.posPlayer.y] = player.sprite;
+
+	for (int i = 0; i < maxPotion; i++)
+	{
+		mapVec_[(rand() % 18) + 1][(rand() % 58) + 1] = potion.sprite;
+	}
+
+	for (int i = 0; i < maxTrap; i++)
+	{
+		mapVec_[(rand() % 18) + 1][(rand() % 58) + 1] = trap.sprite;
+	}
+	
 }
 
 void Map::GenerateWall()
@@ -269,6 +290,16 @@ void Map::UpdateMap(Player player)
 bool Map::isWall(int newPosX, int newPosY)
 {
 	return mapVec_[newPosX][newPosY] == wall;
+}
+
+bool Map::isTrap(int newPosX, int newPosY)
+{
+	return mapVec_[newPosX][newPosY] == '. ';
+}
+
+bool Map::isPotion(int newPosX, int newPosY)
+{
+	return mapVec_[newPosX][newPosY] == '+';
 }
 
 bool Map::hasWon(Player player, bool win)

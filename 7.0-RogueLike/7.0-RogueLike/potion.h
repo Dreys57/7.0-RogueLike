@@ -10,7 +10,6 @@ public:
 
 	void RegenHealth(int health);
 
-	char sprite;
 	int healthGain;
 
 	Position posHealth;

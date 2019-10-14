@@ -1,6 +1,8 @@
 #include <iostream>
 #include "player.h"
 #include "map.h"
+#include "potion.h"
+#include "trap.h"
 
 Player::Player()
 {
@@ -17,17 +19,7 @@ bool Player::isAlive()
 	return health > 0;
 }
 
-bool Player::isTrap()
-{
-	return false;
-}
-
-bool Player::isPotion()
-{
-	return false;
-}
-
-void Player::PickUp()
+void Player::PickUp(Potion potion)
 {
 	char pick;
 
@@ -38,13 +30,13 @@ void Player::PickUp()
 	{
 	case 'y':
 
-		//call potion.RegenHealth(player.health) and erase the potion
+		potion.RegenHealth(health);
 
 		break;
 
 	case 'n':
 
-		//erase the potion
+		std::cout << "Your choice.\n";
 
 		break;
 
@@ -54,12 +46,14 @@ void Player::PickUp()
 	}
 }
 
-void Player::TakeDamage()
+void Player::TakeDamage(Trap trap)
 {
-	//call trap.DamagePlayer(player.health)
+	std::cout << "You walked on a trap and lost" << trap.damage << "\n";
+
+	trap.DamagePlayer(health);
 }
 
-void Player::Move()
+void Player::Move(Potion potion, Trap trap)
 {
 	char move;
 
@@ -69,46 +63,46 @@ void Player::Move()
 	{
 	case('w'):
 
-		TestMove(posPlayer.x - 1, posPlayer.y);
+		TestMove(posPlayer.x - 1, posPlayer.y, potion, trap);
 
 		break;
 
 	case('a'):
 
-		TestMove(posPlayer.x, posPlayer.y - 1);
+		TestMove(posPlayer.x, posPlayer.y - 1, potion, trap);
 
 		break;
 
 	case('s'):
 
-		TestMove(posPlayer.x + 1, posPlayer.y);
+		TestMove(posPlayer.x + 1, posPlayer.y, potion, trap);
 
 		break;
 
 	case('d'):
 
-		TestMove(posPlayer.x, posPlayer.y + 1);
+		TestMove(posPlayer.x, posPlayer.y + 1, potion, trap);
 
 		break;
 	}
 }
 
-void Player::TestMove(int newPosX, int newPosY)
+void Player::TestMove(int newPosX, int newPosY, Potion potion, Trap trap)
 {
 	if (isWall(newPosX, newPosY))
 	{
 		std::cout << "There is a wall in your way, you can't go through.\n";
 	}
-	else if (isPotion())
+	else if (isPotion(newPosX, newPosY))
 	{
-		PickUp();
+		PickUp(potion);
 
 		posPlayer.x = newPosX;
 		posPlayer.y = newPosY;
 	}
-	else if (isTrap())
+	else if (isTrap(newPosX, newPosY))
 	{
-		TakeDamage();
+		TakeDamage(trap);
 
 		posPlayer.x = newPosX;
 		posPlayer.y = newPosY;
