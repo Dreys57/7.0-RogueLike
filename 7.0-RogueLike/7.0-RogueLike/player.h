@@ -17,7 +17,6 @@ public:
 	int health;
 
 	bool isAlive();
-	
 
 	void PickUp(Potion potion);
 
