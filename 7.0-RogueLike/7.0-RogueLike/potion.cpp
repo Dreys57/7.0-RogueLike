@@ -9,7 +9,7 @@ Potion::Potion()
 	healthGain = 20;	
 }
 
-void Potion::RegenHealth(int health)
+void Potion::RegenHealth(int& health)
 {
 	int maxHealth = 100;
 	

@@ -43,7 +43,7 @@ public:
 
 	bool hasWon(Player player, bool& win);
 
-	std::vector<std::vector<char> > mapVec_;
+	std::vector<std::vector<char> > mapVec;
 
 private:
 

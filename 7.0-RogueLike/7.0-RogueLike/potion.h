@@ -8,7 +8,7 @@ public:
 	Potion();
 	~Potion() {};
 
-	void RegenHealth(int health);
+	void RegenHealth(int& health);
 
 	int healthGain;
 };
