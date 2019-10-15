@@ -23,9 +23,9 @@ public:
 
 	void TakeDamage(Trap trap);
 
-	void Move(Potion potion, Trap trap);
+	void Move(Potion potion, Trap trap, Map& map);
 
-	void TestMove(int newPosX, int newPosY, Potion potion, Trap trap);
+	void TestMove(int newPosX, int newPosY, Potion potion, Trap trap, Map& map);
 
 	Position posPlayer;
 

@@ -32,17 +32,23 @@ void Player::PickUp(Potion potion)
 
 		potion.RegenHealth(health);
 
+		system("pause");
+
 		break;
 
 	case 'n':
 
 		std::cout << "Your choice.\n";
 
+		system("pause");
+
 		break;
 
 	default:
 
 		std::cout << "You missed a chance, now the potion is gone.\n";
+
+		break;
 	}
 }
 
@@ -53,7 +59,7 @@ void Player::TakeDamage(Trap trap)
 	trap.DamagePlayer(health);
 }
 
-void Player::Move(Potion potion, Trap trap)
+void Player::Move(Potion potion, Trap trap, Map& map)
 {
 	char move;
 
@@ -63,44 +69,46 @@ void Player::Move(Potion potion, Trap trap)
 	{
 	case('w'):
 
-		TestMove(posPlayer.x - 1, posPlayer.y, potion, trap);
+		TestMove(posPlayer.x - 1, posPlayer.y, potion, trap, map);
 
 		break;
 
 	case('a'):
 
-		TestMove(posPlayer.x, posPlayer.y - 1, potion, trap);
+		TestMove(posPlayer.x, posPlayer.y - 1, potion, trap, map);
 
 		break;
 
 	case('s'):
 
-		TestMove(posPlayer.x + 1, posPlayer.y, potion, trap);
+		TestMove(posPlayer.x + 1, posPlayer.y, potion, trap, map);
 
 		break;
 
 	case('d'):
 
-		TestMove(posPlayer.x, posPlayer.y + 1, potion, trap);
+		TestMove(posPlayer.x, posPlayer.y + 1, potion, trap, map);
 
 		break;
 	}
 }
 
-void Player::TestMove(int newPosX, int newPosY, Potion potion, Trap trap)
+void Player::TestMove(int newPosX, int newPosY, Potion potion, Trap trap, Map& map)
 {
-	if (isWall(newPosX, newPosY))
+	if (map.isWall(newPosX, newPosY))
 	{
 		std::cout << "There is a wall in your way, you can't go through.\n";
+
+		system("pause");
 	}
-	else if (isPotion(newPosX, newPosY))
+	else if (map.isPotion(newPosX, newPosY, potion))
 	{
 		PickUp(potion);
 
 		posPlayer.x = newPosX;
 		posPlayer.y = newPosY;
 	}
-	else if (isTrap(newPosX, newPosY))
+	else if (map.isTrap(newPosX, newPosY, trap))
 	{
 		TakeDamage(trap);
 

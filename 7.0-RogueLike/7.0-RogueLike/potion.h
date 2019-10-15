@@ -11,8 +11,4 @@ public:
 	void RegenHealth(int health);
 
 	int healthGain;
-
-	Position posHealth;
-
-private:
 };

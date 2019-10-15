@@ -37,11 +37,11 @@ public:
 
 	bool isWall(int newPosX, int newPosY);
 
-	bool isTrap(int newPosX, int newPosY);
+	bool isTrap(int newPosX, int newPosY, Trap trap);
 
-	bool isPotion(int newPosX, int newPosY);
+	bool isPotion(int newPosX, int newPosY, Potion potion);
 
-	bool hasWon(Player player, bool win);
+	bool hasWon(Player player, bool& win);
 
 	std::vector<std::vector<char> > mapVec_;
 

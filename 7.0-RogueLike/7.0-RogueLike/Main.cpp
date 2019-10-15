@@ -32,7 +32,7 @@ int main()
 
 		map.UpdateMap(player);
 
-		player.Move(potion, trap);
+		player.Move(potion, trap, map);
 
 		map.hasWon(player, win);
 	}

@@ -6,6 +6,8 @@
 
 Map::Map()
 {
+	
+
 	mapVec_ = std::vector<std::vector<char> >(length_, std::vector<char>(width_));
 
 	for (int i = 0; i < length_; i++)
@@ -19,6 +21,8 @@ Map::Map()
 	mapVec_[19][58] = door;
 
 	GenerateWall();
+
+	
 }
 
 Map::Map(Player player, Potion potion, Trap trap): Map()
@@ -292,27 +296,29 @@ bool Map::isWall(int newPosX, int newPosY)
 	return mapVec_[newPosX][newPosY] == wall;
 }
 
-bool Map::isTrap(int newPosX, int newPosY)
+bool Map::isTrap(int newPosX, int newPosY, Trap trap)
 {
-	return mapVec_[newPosX][newPosY] == '. ';
+	return mapVec_[newPosX][newPosY] == trap.sprite;
 }
 
-bool Map::isPotion(int newPosX, int newPosY)
+bool Map::isPotion(int newPosX, int newPosY, Potion potion)
 {
-	return mapVec_[newPosX][newPosY] == '+';
+	return mapVec_[newPosX][newPosY] == potion.sprite;
 }
 
-bool Map::hasWon(Player player, bool win)
+bool Map::hasWon(Player player, bool& win)
 {
 	if (mapVec_[player.posPlayer.x][player.posPlayer.y] == door)
 	{
 		win = true;
 
 		std::cout << "Congratulations, you have won!\n";
+		system("pause");
 	}
 	else if (!player.isAlive())
 	{
 		std::cout << "Sorry, you are dead, it's game over for you\n";
+		system("pause");
 	}
 
 
